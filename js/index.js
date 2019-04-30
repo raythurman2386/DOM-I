@@ -51,6 +51,11 @@ navItems[3].textContent = siteContent['nav']['nav-item-4'];
 navItems[4].textContent = siteContent['nav']['nav-item-5'];
 navItems[5].textContent = siteContent['nav']['nav-item-6'];
 
+
+// Change nav color to green
+navItems.forEach(item => item.style.color = 'seagreen');
+
+
 // CTA items
 const ctaLogo = document.getElementById('cta-img');
 const ctaH1 = document.querySelector('.cta-text h1');
