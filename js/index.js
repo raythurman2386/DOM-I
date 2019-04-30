@@ -92,3 +92,8 @@ contactHeader.textContent = siteContent['contact']['contact-h4'];
 contactParas[0].textContent = siteContent['contact']['address'];
 contactParas[1].textContent = siteContent['contact']['phone'];
 contactParas[2].textContent = siteContent['contact']['email'];
+
+// Footer
+const footerP = document.querySelector('footer p');
+
+footerP.textContent = siteContent['footer']['copyright'];
