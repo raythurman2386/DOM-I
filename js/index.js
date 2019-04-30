@@ -72,3 +72,23 @@ topContentParas[1].textContent = siteContent['main-content']['about-content'];
 // Center img
 const centerImg = document.getElementById('middle-img');
 centerImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+// Bottom Content
+const botContentHeadings = document.querySelectorAll('.bottom-content .text-content h4');
+const botContentParas = document.querySelectorAll('.bottom-content .text-content p');
+
+botContentHeadings[0].textContent = siteContent['main-content']['services-h4'];
+botContentParas[0].textContent = siteContent['main-content']['services-content'];
+botContentHeadings[1].textContent = siteContent['main-content']['product-h4'];
+botContentParas[1].textContent = siteContent['main-content']['product-content'];
+botContentHeadings[2].textContent = siteContent['main-content']['vision-h4'];
+botContentParas[2].textContent = siteContent['main-content']['vision-content'];
+
+// Contact
+const contactHeader = document.querySelector('.contact h4');
+const contactParas = document.querySelectorAll('.contact p');
+
+contactHeader.textContent = siteContent['contact']['contact-h4'];
+contactParas[0].textContent = siteContent['contact']['address'];
+contactParas[1].textContent = siteContent['contact']['phone'];
+contactParas[2].textContent = siteContent['contact']['email'];
