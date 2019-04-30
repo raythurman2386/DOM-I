@@ -42,6 +42,7 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // nav items
+const nav = document.querySelector('nav');
 const navItems = document.querySelectorAll('nav a');
 
 navItems[0].textContent = siteContent['nav']['nav-item-1'];
@@ -54,6 +55,17 @@ navItems[5].textContent = siteContent['nav']['nav-item-6'];
 
 // Change nav color to green
 navItems.forEach(item => item.style.color = 'seagreen');
+
+// Creating Two more nav items
+const newNav1 = document.createElement('a');
+newNav1.textContent = 'Home';
+newNav1.style.color = 'seagreen';
+nav.prepend(newNav1);
+
+const newNav2 = document.createElement('a');
+newNav2.textContent = 'Random';
+newNav2.style.color = 'seagreen';
+nav.appendChild(newNav2);
 
 
 // CTA items
