@@ -69,6 +69,7 @@ nav.appendChild(newNav2);
 
 
 // CTA items
+const cta = document.querySelector('.cta');
 const ctaLogo = document.getElementById('cta-img');
 const ctaH1 = document.querySelector('.cta-text h1');
 const ctaButton = document.querySelector('.cta-text button');
@@ -114,3 +115,14 @@ contactParas[2].textContent = siteContent['contact']['email'];
 const footerP = document.querySelector('footer p');
 
 footerP.textContent = siteContent['footer']['copyright'];
+
+
+// STRETCH
+// Adding Styles through JS to Make nav fixed
+const header = document.querySelector('header');
+header.style.position = 'fixed';
+header.style.top = '0';
+header.style.zIndex = '1';
+header.style.backgroundColor = '#fff';
+
+cta.style.marginTop = '100px';
