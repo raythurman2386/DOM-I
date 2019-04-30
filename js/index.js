@@ -52,7 +52,6 @@ navItems[3].textContent = siteContent['nav']['nav-item-4'];
 navItems[4].textContent = siteContent['nav']['nav-item-5'];
 navItems[5].textContent = siteContent['nav']['nav-item-6'];
 
-
 // Change nav color to green
 navItems.forEach(item => item.style.color = 'seagreen');
 
@@ -66,7 +65,6 @@ const newNav2 = document.createElement('a');
 newNav2.textContent = 'Random';
 newNav2.style.color = 'seagreen';
 nav.appendChild(newNav2);
-
 
 // CTA items
 const cta = document.querySelector('.cta');
@@ -116,7 +114,6 @@ const footerP = document.querySelector('footer p');
 
 footerP.textContent = siteContent['footer']['copyright'];
 
-
 // STRETCH
 // Adding Styles through JS to Make nav fixed
 const header = document.querySelector('header');
@@ -126,3 +123,13 @@ header.style.zIndex = '1';
 header.style.backgroundColor = '#fff';
 
 cta.style.marginTop = '100px';
+
+// Button event listener
+ctaButton.addEventListener('click', (e) => {
+  if (ctaH1.textContent === siteContent['cta']['h1']) {
+    ctaH1.textContent = "Don't Click Me!";
+  } else {
+    ctaH1.textContent = siteContent['cta']['h1'];
+  }
+
+});
