@@ -45,6 +45,10 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 const nav = document.querySelector('nav');
 const navItems = document.querySelectorAll('nav a');
 
+navItems.forEach(item => {
+  item.textContent = siteContent['nav']
+});
+
 navItems[0].textContent = siteContent['nav']['nav-item-1'];
 navItems[1].textContent = siteContent['nav']['nav-item-2'];
 navItems[2].textContent = siteContent['nav']['nav-item-3'];
@@ -126,10 +130,16 @@ cta.style.marginTop = '100px';
 
 // Button event listener
 ctaButton.addEventListener('click', (e) => {
-  if (ctaH1.textContent === siteContent['cta']['h1']) {
-    ctaH1.textContent = "Don't Click Me!";
+  // if (ctaH1.textContent === siteContent['cta']['h1']) {
+  //   ctaH1.textContent = `Don't Click Me!`;
+  // } else {
+  //   ctaH1.textContent = siteContent['cta']['h1'];
+  // }
+
+  if (cta.style.flexDirection === 'row') {
+    cta.style.flexDirection = 'row-reverse';
   } else {
-    ctaH1.textContent = siteContent['cta']['h1'];
+    cta.style.flexDirection = 'row';
   }
 
 });
