@@ -120,7 +120,7 @@ const contactValues = Object.values(siteContent["contact"]);
 
 contactHeader.textContent = siteContent["contact"]["contact-h4"];
 
-for (let i = 0; i < 4; i++) {
+for (let i = 0; i < 3; i++) {
   contactParas[i].textContent = contactValues[i + 1];
 }
 
