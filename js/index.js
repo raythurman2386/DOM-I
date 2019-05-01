@@ -116,11 +116,13 @@ botContentParas[2].textContent = siteContent["main-content"]["vision-content"];
 // Contact
 const contactHeader = document.querySelector(".contact h4");
 const contactParas = document.querySelectorAll(".contact p");
+const contactValues = Object.values(siteContent["contact"]);
 
 contactHeader.textContent = siteContent["contact"]["contact-h4"];
-contactParas[0].textContent = siteContent["contact"]["address"];
-contactParas[1].textContent = siteContent["contact"]["phone"];
-contactParas[2].textContent = siteContent["contact"]["email"];
+
+for (let i = 0; i < 4; i++) {
+  contactParas[i].textContent = contactValues[i + 1];
+}
 
 // Footer
 const footerP = document.querySelector("footer p");
