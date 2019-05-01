@@ -45,10 +45,6 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 const nav = document.querySelector('nav');
 const navItems = document.querySelectorAll('nav a');
 
-navItems.forEach(item => {
-  item.textContent = siteContent['nav']
-});
-
 navItems[0].textContent = siteContent['nav']['nav-item-1'];
 navItems[1].textContent = siteContent['nav']['nav-item-2'];
 navItems[2].textContent = siteContent['nav']['nav-item-3'];
