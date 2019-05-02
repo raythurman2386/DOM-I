@@ -72,7 +72,12 @@ const ctaLogo = document.getElementById("cta-img");
 const ctaH1 = document.querySelector(".cta-text h1");
 const ctaButton = document.querySelector(".cta-text button");
 
-ctaH1.innerHTML = `Dom <br /> is <br /> Awesome`;
+let h1Arr = siteContent['cta']['h1'].split(' ');
+h1Arr.splice(1, 0, `<br>`);
+h1Arr.splice(3, 0, `<br>`);
+let newH1 = h1Arr.join('');
+
+ctaH1.innerHTML = newH1;
 ctaButton.textContent = siteContent["cta"]["button"];
 ctaLogo.setAttribute("src", siteContent["cta"]["img-src"]);
 
@@ -111,13 +116,16 @@ botContentParas[2].textContent = siteContent["main-content"]["vision-content"];
 // Contact
 const contactHeader = document.querySelector(".contact h4");
 const contactParas = document.querySelectorAll(".contact p");
-const contactValues = Object.values(siteContent["contact"]);
+
+let contactArr = siteContent['contact']['address'].split(' ');
+contactArr.splice(4, 0, `<br>`);
+let newAddress = contactArr.join('');
 
 contactHeader.textContent = siteContent["contact"]["contact-h4"];
 
-for (let i = 0; i < 3; i++) {
-  contactParas[i].textContent = contactValues[i + 1];
-}
+contactParas[0].innerHTML = newAddress;
+contactParas[1].textContent = siteContent['contact']['phone'];
+contactParas[2].textContent = siteContent['contact']['email'];
 
 // Footer
 const footerP = document.querySelector("footer p");
