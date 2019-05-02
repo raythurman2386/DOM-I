@@ -150,9 +150,11 @@ ctaButton.addEventListener("click", e => {
   //   ctaH1.textContent = siteContent['cta']['h1'];
   // }
 
-  if (cta.style.flexDirection === "row") {
+  if (cta.style.flexDirection === "row" && ctaH1.innerHTML === newH1) {
     cta.style.flexDirection = "row-reverse";
+    ctaH1.innerHTML = `Don't <br> Click <br> Me`;
   } else {
     cta.style.flexDirection = "row";
+    ctaH1.innerHTML = newH1;
   }
 });
